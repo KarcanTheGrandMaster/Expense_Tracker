@@ -14,15 +14,15 @@ class Expenses extends StatefulWidget {
 class _ExpensesState extends State<Expenses> {
   final List<Expense> _registeredExpenses = [
     Expense(
-        title: 'Beer Plus',
-        amount: 250.0,
+        title: 'Fathi Kara',
+        amount: 12250.0,
         date: DateTime.now(),
-        category: Category.Fun),
+        category: Category.Land),
     Expense(
-        title: 'Pizza ',
-        amount: 100,
+        title: 'Zekeriya assa ',
+        amount: 13100,
         date: DateTime.now(),
-        category: Category.Fun),
+        category: Category.Home),
   ];
 
   @override

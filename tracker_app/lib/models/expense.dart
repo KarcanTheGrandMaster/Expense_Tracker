@@ -1,8 +1,8 @@
 import 'package:uuid/uuid.dart';
-import 'package:tr'
+
 const uuid = Uuid();
 
-enum Category { Food, Travel, Fun, Work }
+enum Category { Home, Store, Vehicle, Land }
 
 class Expense {
   Expense({
