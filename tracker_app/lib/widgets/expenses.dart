@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tracker_app/widgets/expenses_list/expenses_list.dart';
 import 'package:tracker_app/models/expense.dart';
 
 class Expenses extends StatefulWidget {
@@ -25,14 +26,32 @@ class _ExpensesState extends State<Expenses> {
         category: Category.Home),
   ];
 
+  void _openAddExpenseOverlay() {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) => Text("Modal bottom sheet"),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     //TODO: implement build
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Renter Add'),
+        actions: [
+          IconButton(
+            onPressed: _openAddExpenseOverlay,
+            icon: const Icon(Icons.add),
+          ),
+        ],
+      ),
       body: Column(
-        children: const [
-          Text('ddddddd'),
-          Text('dddddddd'),
+        children: [
+          const Text('Renters'),
+          Expanded(
+            child: ExpensesList(expenses: _registeredExpenses),
+          ),
         ],
       ),
     );
