@@ -79,6 +79,7 @@ class _NewExpenseState extends State<NewExpense> {
     final keyboardSpace = MediaQuery.of(context).viewInsets.bottom;
     return SizedBox(
       height: double.infinity,
+      width: double.infinity,
       child: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.fromLTRB(16, 48, 16, keyboardSpace + 16),
